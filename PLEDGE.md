@@ -62,6 +62,34 @@ Honor system, in public. The report is the verification. Stewards may add a note
 questioning an organization's reported contribution. A steward employed by that organization
 says so in the note.
 
+## Show the badge
+
+An organization on the signatory list may show its tier badge on its website, in a README, or
+in its pledge post while its latest report is under 18 months old. The badge says that you
+pledged; it does not say that the movement endorses what you make. When the report lapses, the
+badge comes down with it.
+
+![One Day · Weekly](https://onedayforhumanity.org/badges/weekly.svg)
+![One Day · Monthly](https://onedayforhumanity.org/badges/monthly.svg)
+![One Day · Quarterly](https://onedayforhumanity.org/badges/quarterly.svg)
+![One Day · Yearly](https://onedayforhumanity.org/badges/yearly.svg)
+
+The images are served by the site, so they follow the design if it changes. Link the badge to
+onedayforhumanity.org so a reader can find out what it means. In a README:
+
+```markdown
+[![One Day · Monthly](https://onedayforhumanity.org/badges/monthly.svg)](https://onedayforhumanity.org)
+```
+
+On a web page:
+
+```html
+<a href="https://onedayforhumanity.org"><img src="https://onedayforhumanity.org/badges/monthly.svg" alt="One Day · Monthly" height="22"></a>
+```
+
+Swap `monthly` for `weekly`, `quarterly`, or `yearly` to match your tier. Use the file as it
+is; the source is `design/badges.mjs` in the movement's repository.
+
 ## Suggested pledge announcement for organizations
 
 > Today, <organization> joins One Day for Humanity at the <tier> tier.

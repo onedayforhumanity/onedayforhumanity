@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="163" height="22" viewBox="0 0 163 22" role="img" aria-label="One Day · Yearly · 1/250">
+  <!-- Written by design/badges.mjs from web/src/styles/tokens.css. Do not edit by hand. -->
+  <title>One Day · Yearly · 1/250</title>
+  <clipPath id="chip"><rect width="163" height="22" rx="4"/></clipPath>
+  <g clip-path="url(#chip)">
+    <rect width="66" height="22" fill="#fbf8f3"/>
+    <rect x="66" width="97" height="22" fill="#b8532f"/>
+  </g>
+  <g font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-size="11" text-anchor="middle">
+    <text x="33" y="15" fill="#1f1b17" textLength="47.6" lengthAdjust="spacing">One Day</text>
+    <text x="114.5" y="15" fill="#ffffff" textLength="78.8" lengthAdjust="spacing">Yearly · 1/250</text>
+  </g>
+</svg>

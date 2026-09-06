@@ -28,6 +28,7 @@ export const links = {
   principlesEdit: `${REPO}/edit/main/PRINCIPLES.md`,
   changelog: `${REPO}/blob/main/CHANGELOG.md`,
   pledge: `${REPO}/blob/main/PLEDGE.md`,
+  badges: `${REPO}/blob/main/PLEDGE.md#show-the-badge`,
   signatories: `${REPO}/blob/main/SIGNATORIES.md`,
   signatoriesEdit: `${REPO}/edit/main/SIGNATORIES.md`,
   signIssue: `${REPO}/issues/new?template=sign.yml`,

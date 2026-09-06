@@ -84,6 +84,10 @@ export function Join() {
               </span>
             </span>
           ))}
+          <p className={s.badgesNote}>
+            Show yours in a README or on your website: the files and the snippet are in{' '}
+            <a href={links.badges}>PLEDGE.md</a>.
+          </p>
         </div>
       </div>
     </Section>

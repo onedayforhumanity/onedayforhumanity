@@ -20,6 +20,7 @@ design/
 ├─ linkedin/                      logo, cover, first-post image, and README.md with the text
 ├─ github/                        avatar, social preview, and README.md with the org profile text
 ├─ x/                             profile photo, header, and README.md with the bio and posts
+├─ badges.mjs                     writes the four tier badges to web/public/badges/
 └─ render.mjs                     regenerates every PNG from templates.html
 ```
 
@@ -50,13 +51,18 @@ size, writes the PNGs into the folders above, and copies the 1200 by 630 card to
 `web/public/og.png`. Change a size or a line of copy in the template, run it again, and every
 platform gets the new version.
 
+`node design/badges.mjs` writes the four tier badges as SVG into `web/public/badges/`, from the
+same tokens and the tiers the site shows. It needs no Chrome, and the text is sized for
+Verdana, which is what a README viewer is most likely to have.
+
 ## Using the mark and the name
 
 The files are CC BY 4.0, like every document in this repository. The name and the mark are held
 as `GOVERNANCE.md` section 6 says: by the founder, through the GitHub organization, until the
 movement chooses its non-profit home. Use them to talk about the movement. Members may use the
-tier badge described in `PLEDGE.md` while their latest report is under 18 months old. Do not use
-the mark in a way that suggests the movement endorses a product or an employer.
+tier badge described in `PLEDGE.md` while their latest report is under 18 months old; the badge
+files are in `web/public/badges/` and `PLEDGE.md` has the snippet. Do not use the mark in a way
+that suggests the movement endorses a product or an employer.
 
 ## Sizes
 

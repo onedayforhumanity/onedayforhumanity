@@ -144,3 +144,20 @@
   background: var(--odh-accent);
   color: var(--odh-surface);
 }
+
+/* One line under the chips, so an organization knows where to get its badge. */
+.badgesNote {
+  flex-basis: 100%;
+  margin: 0;
+  font: 400 13px / 1.5 var(--odh-font-sans);
+  color: var(--odh-paper-70);
+}
+
+.badgesNote a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.badgesNote a:hover {
+  color: var(--odh-accent-soft);
+}

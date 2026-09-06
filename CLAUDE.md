@@ -68,12 +68,13 @@ onedayforhumanity/
 ├─ .github/dependabot.yml     weekly npm and actions updates, grouped
 ├─ research/                  research notes (missions, manifesto)
 ├─ templates/                 DAYS.md, RETRO.md, DATA_POLICY.md, copied into each mission
-├─ design/                    brand kit: SVG marks, templates.html, render.mjs, LinkedIn, GitHub, X
+├─ design/                    brand kit: SVG marks, templates.html, render.mjs, badges.mjs, LinkedIn, GitHub, X
 ├─ web/                       the site (Vite, React, TypeScript)
 │  ├─ index.html              landing page document head
 │  ├─ manifesto/index.html    manifesto page document head
 │  ├─ principles/index.html   principles page document head
 │  ├─ public/
+│  │  ├─ badges/              four tier badges as SVG, written by design/badges.mjs
 │  │  ├─ favicon.svg          the five-dot mark, one square given
 │  │  └─ staticwebapp.config.json   SWA routes and security headers (copied into dist/)
 │  ├─ vite.config.ts          three entries, plus the markdownHtml() plugin
@@ -114,6 +115,10 @@ From the repository root, `node design/render.mjs` regenerates every PNG in `des
 `web/public/og.png` from `design/brand/templates.html`, using the Chrome on the machine (set
 `CHROME` if it is not at the default Windows path). Run it after changing a token or the
 template.
+
+`node design/badges.mjs` writes the four tier badges to `web/public/badges/` as SVG, from the
+same tokens and the tiers in `web/src/content/site.ts`. It needs no Chrome. Run it after
+changing a token or a tier, and commit the result.
 
 CI gates on `typecheck`, `lint`, and `build`. Run all three before handing work back.
 
@@ -245,6 +250,8 @@ Everything here is deliberate. Do not "fix" one without reading the reason.
    once the page has rendered, without animation, which is what the browser would have done on
    its own. It leaves an already-scrolled page alone, so a reload part-way down still restores
    its position.
+9. **The badge row in the Join panel carries one line saying where to get the badge**, added
+   on 6 September 2026 with the badge files. The design draws the four chips and nothing else.
 
 ### Not in the design
 
@@ -252,7 +259,9 @@ The brief asks for these. Only the landing page was drawn, so the port does not 
 
 - A **logo or wordmark asset** was not drawn. `design/brand/` now holds the mark as SVG and the
   lockups and avatars as PNG, generated from the site's tokens and fonts, not from Claude Design.
-- **Tier badge assets** for READMEs. The badges render in HTML and CSS inside the Join section.
+- **Tier badge assets** for READMEs were not drawn. `web/public/badges/*.svg` are written by
+  `design/badges.mjs` from the tokens and the tiers, in the shape of the chips in the Join
+  section, and `PLEDGE.md` says how to use them.
 - A **social image** (brief deliverable 5) was not drawn. `web/public/og.png` is the 1200 by 630
   card from `design/brand/templates.html`, and every document head references it with `og:url`
   and a canonical link on `onedayforhumanity.org`. Regenerate it with `node design/render.mjs`.

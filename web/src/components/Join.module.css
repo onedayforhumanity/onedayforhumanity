@@ -1,0 +1,146 @@
+.panel {
+  background: var(--odh-ink);
+  color: var(--odh-paper);
+  border-radius: var(--odh-radius-panel);
+  padding: clamp(32px, 5vw, 56px);
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 640px;
+}
+
+.title {
+  margin: 0;
+  font: 600 clamp(26px, 3vw, 34px) / 1.15 var(--odh-font-sans);
+  letter-spacing: -0.025em;
+}
+
+.lede {
+  margin: 0;
+  font: 400 16px / 1.5 var(--odh-font-sans);
+  color: var(--odh-paper-70);
+}
+
+.tracks {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+  gap: 32px 48px;
+}
+
+.track {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.trackLabel {
+  margin: 0;
+  font: 500 12px var(--odh-font-mono);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--odh-accent-soft);
+}
+
+/* Numbered, but the numbers are set in mono beside the step rather than as markers. */
+.steps {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  font: 400 16px / 1.5 var(--odh-font-sans);
+}
+
+.step {
+  display: flex;
+  gap: 14px;
+}
+
+.stepNumber {
+  font: 500 13px / 1.7 var(--odh-font-mono);
+  color: var(--odh-accent-soft);
+  flex: none;
+}
+
+.step a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.step a:hover {
+  color: var(--odh-accent-soft);
+}
+
+.code {
+  font: 400 14px var(--odh-font-mono);
+  background: var(--odh-paper-10);
+  padding: 2px 6px;
+  border-radius: var(--odh-radius-chip);
+}
+
+.buttonOutline {
+  align-self: flex-start;
+  padding: 12px 20px;
+  border: 1px solid var(--odh-paper-35);
+  border-radius: var(--odh-radius-pill);
+  font: 500 14px var(--odh-font-sans);
+  white-space: nowrap;
+}
+
+.buttonOutline:hover {
+  border-color: var(--odh-paper);
+  color: var(--odh-paper);
+}
+
+.buttonSolid {
+  align-self: flex-start;
+  padding: 12px 20px;
+  background: var(--odh-accent);
+  color: var(--odh-surface);
+  border-radius: var(--odh-radius-pill);
+  font: 500 14px var(--odh-font-sans);
+  white-space: nowrap;
+}
+
+.buttonSolid:hover {
+  background: var(--odh-paper);
+  color: var(--odh-ink);
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-top: 8px;
+  border-top: 1px solid var(--odh-paper-15);
+}
+
+/* Two-part chip, shaped like a shields.io badge so it reads the same in a README. */
+.badge {
+  display: inline-flex;
+  height: 22px;
+  border-radius: var(--odh-radius-chip);
+  overflow: hidden;
+  font: 500 11px / 22px var(--odh-font-sans);
+}
+
+.badgeLabel {
+  white-space: nowrap;
+  padding: 0 9px;
+  background: var(--odh-paper);
+  color: var(--odh-ink);
+}
+
+.badgeValue {
+  white-space: nowrap;
+  padding: 0 9px;
+  background: var(--odh-accent);
+  color: var(--odh-surface);
+}

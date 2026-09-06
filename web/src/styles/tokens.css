@@ -1,0 +1,58 @@
+/*
+ * Design tokens for One Day for Humanity.
+ *
+ * Every value here is lifted verbatim from the Claude Design source of truth,
+ * Landing.dc.html (project b8ae3cd1-a073-48dc-9b8e-9af556d4d4ad). Do not edit
+ * this file by hand: change it in Claude Design and re-import, or the two drift
+ * apart silently. Nothing outside this file may hardcode a colour.
+ */
+
+:root {
+  /* --- Palette --- */
+  --odh-paper: #fbf8f3;         /* page ground */
+  --odh-ink: #1f1b17;           /* body text, dark panels */
+  --odh-accent: #b8532f;        /* terracotta: hero, links on hover, marks */
+  --odh-cream: #fff8f2;         /* text and fills on the accent ground */
+  --odh-accent-soft: #e8906f;   /* accent lifted for legibility on the ink ground */
+  --odh-surface: #ffffff;       /* card fill */
+
+  /* Ink at opacity, for text and rules on the paper ground */
+  --odh-ink-10: rgba(31, 27, 23, 0.1);
+  --odh-ink-12: rgba(31, 27, 23, 0.12);
+  --odh-ink-14: rgba(31, 27, 23, 0.14);
+  --odh-ink-30: rgba(31, 27, 23, 0.3);
+  --odh-ink-55: rgba(31, 27, 23, 0.55);
+  --odh-ink-60: rgba(31, 27, 23, 0.6);
+  --odh-ink-65: rgba(31, 27, 23, 0.65);
+  --odh-ink-70: rgba(31, 27, 23, 0.7);
+
+  /* Cream at opacity, for content on the accent ground */
+  --odh-cream-14: rgba(255, 248, 242, 0.14);
+  --odh-cream-75: rgba(255, 248, 242, 0.75);
+  --odh-cream-80: rgba(255, 248, 242, 0.8);
+  --odh-cream-88: rgba(255, 248, 242, 0.88);
+
+  /* Paper at opacity, for content on the ink ground */
+  --odh-paper-10: rgba(255, 255, 255, 0.1);
+  --odh-paper-15: rgba(251, 248, 243, 0.15);
+  --odh-paper-35: rgba(251, 248, 243, 0.35);
+  --odh-paper-70: rgba(251, 248, 243, 0.7);
+
+  /* --- Type --- */
+  --odh-font-sans: 'Work Sans Variable', 'Work Sans', system-ui, sans-serif;
+  --odh-font-mono: 'JetBrains Mono Variable', 'JetBrains Mono', ui-monospace, monospace;
+
+  /* --- Radii --- */
+  --odh-radius-panel: 20px;   /* hero, join panel */
+  --odh-radius-card: 14px;    /* tier, commitment, mission cards */
+  --odh-radius-cell: 6px;     /* hero calendar cells */
+  --odh-radius-chip: 4px;     /* tier badges, inline code */
+  --odh-radius-hair: 1px;     /* tier-card grain cells */
+  --odh-radius-pill: 999px;   /* buttons */
+
+  /* --- Layout --- */
+  --odh-max-width: 1200px;
+  --odh-gutter: clamp(16px, 4vw, 40px);
+  --odh-section-gap: clamp(56px, 8vw, 96px);
+  --odh-panel-inset: clamp(10px, 2vw, 24px);
+}

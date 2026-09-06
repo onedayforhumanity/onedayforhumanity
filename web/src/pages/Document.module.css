@@ -1,0 +1,199 @@
+/*
+ * Long-form reading, in the landing page's type and tokens. The markup comes
+ * from a markdown file via the build, so every selector here targets plain
+ * elements inside .article rather than classes.
+ */
+
+.article {
+  max-width: 720px;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: clamp(40px, 6vw, 72px) var(--odh-gutter) 0;
+  font: 400 17px / 1.6 var(--odh-font-sans);
+  color: var(--odh-ink);
+  text-wrap: pretty;
+}
+
+/* --- Title block: everything before the first h2 --- */
+
+.article > header {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-bottom: clamp(32px, 5vw, 56px);
+}
+
+.article h1 {
+  margin: 0;
+  font: 600 clamp(34px, 5vw, 56px) / 1.08 var(--odh-font-sans);
+  letter-spacing: -0.03em;
+}
+
+/* The version line directly under the title. */
+.article h1 + p {
+  margin: 0;
+  font: 400 13px / 1.6 var(--odh-font-mono);
+  color: var(--odh-ink-65);
+}
+
+.article h1 + p em {
+  font-style: normal;
+}
+
+/* The opening argument reads slightly larger than the body. */
+.article > header p {
+  margin: 0;
+  font-size: clamp(18px, 2vw, 21px);
+  line-height: 1.5;
+}
+
+.article > header hr {
+  display: none;
+}
+
+/* --- Body --- */
+
+.article hr {
+  border: 0;
+  border-top: 1px solid var(--odh-ink-12);
+  margin: clamp(40px, 6vw, 64px) 0;
+}
+
+.article h2 {
+  margin: 0 0 24px;
+  font: 600 clamp(26px, 3vw, 34px) / 1.15 var(--odh-font-sans);
+  letter-spacing: -0.025em;
+  scroll-margin-top: 24px;
+}
+
+.article p {
+  margin: 0 0 20px;
+}
+
+.article a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.article a:hover {
+  color: var(--odh-accent);
+}
+
+.article code {
+  font: 400 0.88em var(--odh-font-mono);
+  background: var(--odh-ink-10);
+  padding: 2px 6px;
+  border-radius: var(--odh-radius-chip);
+}
+
+.article strong {
+  font-weight: 600;
+}
+
+/* Numbered lists: mono ordinals in terracotta. */
+.article ol {
+  list-style: none;
+  counter-reset: item;
+  margin: 0 0 24px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.article ol > li {
+  counter-increment: item;
+  display: grid;
+  grid-template-columns: 2.4em 1fr;
+  gap: 0 6px;
+}
+
+.article ol > li::before {
+  content: counter(item, decimal-leading-zero);
+  font: 500 13px / 1.9 var(--odh-font-mono);
+  color: var(--odh-accent);
+}
+
+.article ol > li p {
+  margin: 0;
+}
+
+/* Bulleted lists (the value pairs): the chosen thing carries the weight. */
+.article ul {
+  list-style: none;
+  margin: 0 0 24px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: var(--odh-ink-70);
+}
+
+.article ul strong {
+  color: var(--odh-ink);
+}
+
+/* --- Numbered documents (the principles): an ordinal on every h2 --- */
+
+.numbered {
+  counter-reset: section;
+}
+
+.numbered h2 {
+  counter-increment: section;
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  align-items: baseline;
+  margin-top: clamp(36px, 5vw, 56px);
+}
+
+.numbered h2:first-of-type {
+  margin-top: 0;
+}
+
+.numbered h2::before {
+  content: counter(section, decimal-leading-zero);
+  font: 500 14px / 1 var(--odh-font-mono);
+  color: var(--odh-accent);
+}
+
+.numbered h2 ~ p {
+  padding-left: 44px;
+}
+
+/* --- End panel --- */
+
+.panel {
+  gap: 28px;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 16px;
+}
+
+.note {
+  margin: 0;
+  font: 400 14px / 1.55 var(--odh-font-sans);
+  color: var(--odh-paper-70);
+  max-width: 640px;
+}
+
+.meta {
+  margin: 0;
+  padding-top: 8px;
+  border-top: 1px solid var(--odh-paper-15);
+  font: 400 13px / 1.8 var(--odh-font-mono);
+  color: var(--odh-paper-70);
+}
+
+.meta a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.meta a:hover {
+  color: var(--odh-accent-soft);
+}

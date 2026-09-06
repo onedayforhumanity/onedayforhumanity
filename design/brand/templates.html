@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>One Day for Humanity brand templates</title>
+    <style>
+      /*
+       * Every asset in the kit is an element on this page. render.mjs opens it in
+       * headless Chrome and screenshots each element at its exact size. Colours
+       * come from the site's own token file and the type from the site's own
+       * font files, so nothing here can drift from the site.
+       */
+      @import url("../../web/src/styles/tokens.css");
+
+      @font-face {
+        font-family: "Work Sans Variable";
+        font-style: normal;
+        font-weight: 100 900;
+        src: url("../../web/node_modules/@fontsource-variable/work-sans/files/work-sans-latin-wght-normal.woff2") format("woff2");
+      }
+
+      @font-face {
+        font-family: "JetBrains Mono Variable";
+        font-style: normal;
+        font-weight: 100 800;
+        src: url("../../web/node_modules/@fontsource-variable/jetbrains-mono/files/jetbrains-mono-latin-wght-normal.woff2") format("woff2");
+      }
+
+      body {
+        margin: 0;
+        padding: 24px;
+        background: #888;
+        font-family: var(--odh-font-sans);
+        -webkit-font-smoothing: antialiased;
+      }
+
+      .asset {
+        position: relative;
+        box-sizing: border-box;
+        overflow: hidden;
+        margin: 0 0 24px;
+      }
+
+      /* The mark: five working days, the first one given. Same geometry as the site header. */
+      .mark {
+        display: grid;
+        grid-template-columns: repeat(5, var(--dot));
+        gap: calc(var(--dot) / 3);
+        flex: none;
+      }
+
+      .mark i {
+        display: block;
+        width: var(--dot);
+        height: var(--dot);
+        background: var(--dim);
+      }
+
+      .mark i:first-child {
+        background: var(--hi);
+      }
+
+      /* Grounds */
+      .on-paper {
+        background: var(--odh-paper);
+        color: var(--odh-ink);
+        --hi: var(--odh-accent);
+        --dim: var(--odh-ink-30);
+      }
+
+      .on-ink {
+        background: var(--odh-ink);
+        color: var(--odh-paper);
+        --hi: var(--odh-accent);
+        --dim: var(--odh-paper-35);
+      }
+
+      .on-terracotta {
+        background: var(--odh-accent);
+        color: var(--odh-cream);
+        --hi: var(--odh-cream);
+        --dim: var(--odh-paper-35);
+      }
+
+      /* Square avatar: the mark alone, 76% of the width. */
+      .avatar {
+        display: grid;
+        place-items: center;
+        width: var(--size);
+        height: var(--size);
+        --dot: calc(var(--size) * 0.12);
+      }
+
+      /* Horizontal lockup: mark and wordmark, the header's proportions. */
+      .lockup {
+        display: inline-flex;
+        align-items: center;
+        gap: calc(var(--dot) * 1.6);
+        padding: calc(var(--dot) * 2) calc(var(--dot) * 2.6);
+      }
+
+      .wordmark {
+        font: 600 calc(var(--dot) * 2.5) / 1 var(--odh-font-sans);
+        letter-spacing: -0.01em;
+        white-space: nowrap;
+      }
+
+      .eyebrow {
+        margin: 0;
+        font: 500 var(--eyebrow, 16px) / 1 var(--odh-font-mono);
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .headline {
+        margin: 0;
+        font: 600 var(--headline, 68px) / 1.08 var(--odh-font-sans);
+        letter-spacing: -0.03em;
+        text-wrap: pretty;
+      }
+
+      .lede {
+        margin: 0;
+        font: 400 var(--lede, 24px) / 1.5 var(--odh-font-sans);
+        text-wrap: pretty;
+      }
+
+      .domain {
+        margin: 0;
+        font: 400 var(--domain, 20px) / 1 var(--odh-font-mono);
+      }
+
+      .on-paper .eyebrow { color: var(--odh-accent); }
+      .on-paper .domain { color: var(--odh-ink-65); }
+      .on-paper .lede { color: var(--odh-ink-70); }
+      .on-terracotta .eyebrow { color: var(--odh-cream-80); }
+      .on-terracotta .domain { color: var(--odh-cream-75); }
+      .on-terracotta .lede { color: var(--odh-cream-88); }
+
+      /* Card: lockup at the top, message in the middle, domain at the bottom. */
+      .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: var(--pad, 72px);
+      }
+
+      .card .lockup {
+        padding: 0;
+      }
+
+      .card .message {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      /* Banner: one row, for the narrow cover formats. */
+      .banner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: var(--pad, 48px);
+      }
+
+      .banner .lockup {
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Avatars -->
+    <div id="avatar-1000" class="asset avatar on-paper" style="--size: 1000px">
+      <div class="mark"><i></i><i></i><i></i><i></i><i></i></div>
+    </div>
+    <div id="avatar-ink-1000" class="asset avatar on-ink" style="--size: 1000px">
+      <div class="mark"><i></i><i></i><i></i><i></i><i></i></div>
+    </div>
+    <div id="avatar-500" class="asset avatar on-paper" style="--size: 500px">
+      <div class="mark"><i></i><i></i><i></i><i></i><i></i></div>
+    </div>
+    <div id="avatar-400" class="asset avatar on-paper" style="--size: 400px">
+      <div class="mark"><i></i><i></i><i></i><i></i><i></i></div>
+    </div>
+    <div id="avatar-300" class="asset avatar on-paper" style="--size: 300px">
+      <div class="mark"><i></i><i></i><i></i><i></i><i></i></div>
+    </div>
+
+    <!-- Lockups -->
+    <div id="lockup" class="asset lockup on-paper" style="--dot: 40px">
+      <div class="mark"><i></i><i></i><i></i><i></i><i></i></div>
+      <span class="wordmark">One Day for Humanity</span>
+    </div>
+    <div id="lockup-ink" class="asset lockup on-ink" style="--dot: 40px">
+      <div class="mark"><i></i><i></i><i></i><i></i><i></i></div>
+      <span class="wordmark">One Day for Humanity</span>
+    </div>
+
+    <!-- Social card: the site's og:image and GitHub's social preview -->
+    <div id="social-1200" class="asset card on-paper" style="width: 1200px; height: 630px; --pad: 72px; --headline: 68px; --eyebrow: 16px; --domain: 20px">
+      <div class="lockup" style="--dot: 12px">
+        <div class="mark"><i></i><i></i><i></i><i></i><i></i></div>
+        <span class="wordmark">One Day for Humanity</span>
+      </div>
+      <div class="message">
+        <p class="eyebrow">Every week, month, quarter, or year</p>
+        <h1 class="headline" style="max-width: 980px">Give one day to humanity's hardest problems. Give the results away.</h1>
+      </div>
+      <p class="domain">onedayforhumanity.org</p>
+    </div>
+    <div id="social-1280" class="asset card on-paper" style="width: 1280px; height: 640px; --pad: 76px; --headline: 72px; --eyebrow: 17px; --domain: 21px">
+      <div class="lockup" style="--dot: 13px">
+        <div class="mark"><i></i><i></i><i></i><i></i><i></i></div>
+        <span class="wordmark">One Day for Humanity</span>
+      </div>
+      <div class="message">
+        <p class="eyebrow">Every week, month, quarter, or year</p>
+        <h1 class="headline" style="max-width: 1040px">Give one day to humanity's hardest problems. Give the results away.</h1>
+      </div>
+      <p class="domain">onedayforhumanity.org</p>
+    </div>
+
+    <!-- LinkedIn: the page logo sits over the cover's bottom-left corner, so the cover keeps that area empty -->
+    <div id="linkedin-cover" class="asset banner on-terracotta" style="width: 1128px; height: 191px; --pad: 0 56px 0 320px; --domain: 16px">
+      <div class="lockup" style="--dot: 13px">
+        <div class="mark"><i></i><i></i><i></i><i></i><i></i></div>
+        <span class="wordmark">One Day for Humanity</span>
+      </div>
+      <p class="domain">onedayforhumanity.org</p>
+    </div>
+    <div id="linkedin-post" class="asset card on-terracotta" style="width: 1200px; height: 627px; --pad: 72px; --headline: 54px; --eyebrow: 16px; --domain: 20px">
+      <div class="lockup" style="--dot: 12px">
+        <div class="mark"><i></i><i></i><i></i><i></i><i></i></div>
+        <span class="wordmark">One Day for Humanity</span>
+      </div>
+      <div class="message">
+        <p class="eyebrow">Pre-launch · Open for comment</p>
+        <h1 class="headline" style="max-width: 1040px">A commitment by people and organizations to give a fixed, recurring share of their working time to humanity's hardest problems, and to give the results away.</h1>
+      </div>
+      <p class="domain">onedayforhumanity.org</p>
+    </div>
+
+    <!-- X: the profile photo sits over the header's bottom-left, so the header keeps that area empty -->
+    <div id="x-header" class="asset card on-terracotta" style="width: 1500px; height: 500px; --pad: 56px 72px 56px 480px; --headline: 58px; --eyebrow: 16px; --domain: 20px">
+      <div class="lockup" style="--dot: 12px">
+        <div class="mark"><i></i><i></i><i></i><i></i><i></i></div>
+        <span class="wordmark">One Day for Humanity</span>
+      </div>
+      <div class="message">
+        <p class="eyebrow">Every week, month, quarter, or year</p>
+        <h1 class="headline" style="max-width: 900px">Give one day to humanity's hardest problems. Give the results away.</h1>
+      </div>
+      <p class="domain">onedayforhumanity.org</p>
+    </div>
+  </body>
+</html>

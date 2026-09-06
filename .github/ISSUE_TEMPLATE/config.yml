@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Read the manifesto first
+    url: https://github.com/onedayforhumanity/onedayforhumanity/blob/main/MANIFESTO.md
+    about: The short text people sign. The principles behind it are in PRINCIPLES.md.

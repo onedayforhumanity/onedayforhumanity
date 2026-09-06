@@ -1,0 +1,81 @@
+/* The section shell repeated by every band of the design below the hero. */
+.section {
+  padding: var(--odh-section-gap) var(--odh-gutter) 0;
+  max-width: var(--odh-max-width);
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+/* Cadences, Commitments and Missions stack their heading and grid. */
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* Heading beside a right-aligned lede; wraps to two rows when narrow. */
+.headingRow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px 32px;
+}
+
+/* Heading stacked under a mono eyebrow. */
+.headingStack {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 640px;
+}
+
+.title {
+  margin: 0;
+  font: 600 clamp(26px, 3vw, 34px) / 1.15 var(--odh-font-sans);
+  letter-spacing: -0.025em;
+}
+
+.lede {
+  margin: 0;
+  font: 400 15px / 1.5 var(--odh-font-sans);
+  color: var(--odh-ink-65);
+  max-width: 420px;
+}
+
+.eyebrow {
+  margin: 0;
+  font: 500 12px var(--odh-font-mono);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--odh-accent);
+}
+
+/*
+ * The way back to the menu, at the end of every band. Set like the mono
+ * eyebrows and labels, but in ink rather than terracotta so it reads as a
+ * utility and not as the start of the next section. Ink at 65% on paper
+ * clears WCAG AA, which the design's 55% note does not.
+ */
+.toTop {
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* The stack's gap does this for the other bands. */
+.section:not(.stack) > .toTop {
+  margin-top: 28px;
+}
+
+.toTop a {
+  font: 500 12px var(--odh-font-mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--odh-ink-65);
+}
+
+.toTop a:hover {
+  color: var(--odh-accent);
+}

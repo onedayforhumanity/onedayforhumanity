@@ -1,0 +1,55 @@
+name: Nominate a mission
+description: Propose a problem we can finish. Every nomination and the reasoning behind its outcome is published.
+title: "Mission: "
+labels: ["mission-nomination"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A mission is a problem we can finish, not a field we care about. Read "How missions are chosen" in the README first.
+        Nominations from people who live with the problem, and from maintainers of the projects concerned, carry the most weight.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Who suffers, how many, and how we know
+      description: Cite sources.
+    validations:
+      required: true
+  - type: textarea
+    id: projects
+    attributes:
+      label: Which existing open projects the work would feed
+      description: Name them, with links. We build on what exists rather than duplicate it.
+    validations:
+      required: true
+  - type: textarea
+    id: steward
+    attributes:
+      label: Who could steward it
+      description: A named person who would be accountable for the backlog, the definition of done, and a quarterly report. You can name yourself.
+    validations:
+      required: true
+  - type: textarea
+    id: day
+    attributes:
+      label: What a day-sized task looks like
+      description: One or two examples of work a newcomer could finish in a single day.
+  - type: dropdown
+    id: relation
+    attributes:
+      label: Your relation to the problem
+      options:
+        - I live with it
+        - I care for someone who does
+        - I maintain one of the projects named
+        - I work in the field
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: harm
+    attributes:
+      label: Who it could harm
+      description: Data, safety, devices, conflict. Say what you know, including if the answer is nobody.
+    validations:
+      required: true

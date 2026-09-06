@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="One Day for Humanity">
+  <rect width="32" height="32" rx="6" fill="#fbf8f3"/>
+  <g>
+    <rect x="5"  y="13" width="5" height="5" fill="#b8532f"/>
+    <rect x="12" y="13" width="5" height="5" fill="#1f1b17" opacity="0.3"/>
+    <rect x="19" y="13" width="5" height="5" fill="#1f1b17" opacity="0.3"/>
+    <rect x="26" y="13" width="1" height="5" fill="#1f1b17" opacity="0.3"/>
+  </g>
+</svg>

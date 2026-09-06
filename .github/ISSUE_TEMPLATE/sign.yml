@@ -1,0 +1,56 @@
+name: Sign the manifesto
+description: Add your name without using git. A maintainer turns this into a one-line pull request to SIGNATORIES.md.
+title: "Sign: "
+labels: ["signatory"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Signing is public. Your name, cadence, and the version you signed go into SIGNATORIES.md. Nothing else is stored anywhere.
+        Read MANIFESTO.md and PRINCIPLES.md first. You are signing version 0.2.
+  - type: input
+    id: name
+    attributes:
+      label: Name, or organization
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Signing as
+      options:
+        - An individual
+        - An organization
+    validations:
+      required: true
+  - type: dropdown
+    id: cadence
+    attributes:
+      label: Cadence
+      options:
+        - Weekly (one day in five)
+        - Monthly (one day in twenty)
+        - Quarterly (one day in sixty)
+        - Yearly (one day in 250)
+    validations:
+      required: true
+  - type: dropdown
+    id: time
+    attributes:
+      label: Whose time
+      description: A day given from an employer's time needs the employer's pledge and its authorization of the license. PLEDGE.md explains why.
+      options:
+        - My days are my own time
+        - My employer has pledged with me and authorized the license
+        - I am signing for an organization
+    validations:
+      required: true
+  - type: input
+    id: link
+    attributes:
+      label: Link (optional)
+      description: A website or profile. For organizations, the pledge post.
+  - type: textarea
+    id: statement
+    attributes:
+      label: One line, if you want (optional)

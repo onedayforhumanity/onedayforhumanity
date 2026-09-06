@@ -1,0 +1,97 @@
+/* Self-hosted so the page makes no third-party requests and the CSP stays strict. */
+@import '@fontsource-variable/work-sans';
+@import '@fontsource-variable/jetbrains-mono';
+@import './tokens.css';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+ * Fragment links (the menu, the hero button, the back-to-top links) glide to
+ * their target instead of jumping. The reduced-motion block at the end of this
+ * file turns it back off for visitors who ask for that.
+ */
+html {
+  scroll-behavior: smooth;
+}
+
+/* The design's own <helmet> block, verbatim. */
+body {
+  margin: 0;
+  background: var(--odh-paper);
+  color: var(--odh-ink);
+  font-family: var(--odh-font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--odh-accent);
+}
+
+img,
+svg {
+  max-width: 100%;
+}
+
+/*
+ * The design specifies no focus treatment. A keyboard-only visitor needs one,
+ * so this is additive rather than a change: it never alters the resting state.
+ */
+:focus-visible {
+  outline: 2px solid var(--odh-accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Visible only once tabbed to. */
+.odh-skip-link {
+  position: absolute;
+  left: var(--odh-gutter);
+  top: 12px;
+  z-index: 10;
+  padding: 10px 18px;
+  background: var(--odh-ink);
+  color: var(--odh-paper);
+  border-radius: var(--odh-radius-pill);
+  font: 500 14px var(--odh-font-sans);
+  transform: translateY(-200%);
+}
+
+.odh-skip-link:focus-visible {
+  transform: translateY(0);
+  color: var(--odh-paper);
+}
+
+@media print {
+  .odh-chrome,
+  .odh-skip-link {
+    display: none !important;
+  }
+
+  body {
+    background: var(--odh-surface);
+  }
+
+  a {
+    text-decoration: underline;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

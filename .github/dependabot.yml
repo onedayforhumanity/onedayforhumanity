@@ -1,0 +1,32 @@
+# Keeps the site's npm packages and the workflow's pinned actions current.
+# Minor and patch updates arrive as one pull request per ecosystem each week,
+# so the founder reviews one change rather than ten. Majors come one at a
+# time. Dependabot's pull requests get the build and bicep checks but no
+# preview; see the deploy job in workflows/deploy.yml.
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /web
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 3
+    groups:
+      minor-and-patch:
+        patterns:
+          - '*'
+        update-types:
+          - minor
+          - patch
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 3
+    groups:
+      minor-and-patch:
+        patterns:
+          - '*'
+        update-types:
+          - minor
+          - patch

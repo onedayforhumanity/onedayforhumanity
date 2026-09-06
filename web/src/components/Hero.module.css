@@ -1,0 +1,107 @@
+.hero {
+  margin: 0 var(--odh-panel-inset);
+  background: var(--odh-accent);
+  color: var(--odh-cream);
+  border-radius: var(--odh-radius-panel);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+  gap: clamp(28px, 4vw, 48px);
+  padding: clamp(36px, 6vw, 72px) clamp(24px, 5vw, 56px);
+  align-items: center;
+}
+
+.copy {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.eyebrow {
+  margin: 0;
+  font: 500 12px var(--odh-font-mono);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--odh-cream-80);
+}
+
+.headline {
+  margin: 0;
+  font: 600 clamp(34px, 5vw, 56px) / 1.08 var(--odh-font-sans);
+  letter-spacing: -0.03em;
+  text-wrap: pretty;
+}
+
+.lede {
+  margin: 0;
+  font: 400 clamp(16px, 1.6vw, 18px) / 1.5 var(--odh-font-sans);
+  color: var(--odh-cream-88);
+  max-width: 480px;
+  text-wrap: pretty;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 20px;
+  align-items: center;
+}
+
+.primary {
+  padding: 14px 24px;
+  background: var(--odh-cream);
+  color: var(--odh-accent);
+  border-radius: var(--odh-radius-pill);
+  font: 600 15px var(--odh-font-sans);
+  white-space: nowrap;
+}
+
+.primary:hover {
+  background: var(--odh-ink);
+  color: var(--odh-cream);
+}
+
+.secondary {
+  font: 500 15px var(--odh-font-sans);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  color: var(--odh-cream);
+}
+
+.secondary:hover {
+  color: var(--odh-cream);
+  opacity: 0.8;
+}
+
+.calendar {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+}
+
+.day {
+  aspect-ratio: 1;
+  border-radius: var(--odh-radius-cell);
+  background: var(--odh-cream-14);
+  display: flex;
+  align-items: flex-end;
+  padding: 8px;
+  font: 500 12px var(--odh-font-mono);
+  color: var(--odh-cream-75);
+}
+
+.dayPledged {
+  background: var(--odh-cream);
+  color: var(--odh-accent);
+}
+
+.caption {
+  margin: 0;
+  font: 400 13px var(--odh-font-mono);
+  color: var(--odh-cream-75);
+}

@@ -1,0 +1,32 @@
+.footer {
+  margin-top: var(--odh-section-gap);
+  border-top: 1px solid var(--odh-ink-12);
+  padding: 32px var(--odh-gutter) 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px 40px;
+  font: 400 13px / 1.6 var(--odh-font-sans);
+  color: var(--odh-ink-60);
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-width: 420px;
+}
+
+.name {
+  font: 600 14px var(--odh-font-sans);
+  color: var(--odh-ink);
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  align-content: flex-start;
+  font: 500 13px var(--odh-font-sans);
+  color: var(--odh-ink);
+}

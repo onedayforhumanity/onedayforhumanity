@@ -1,0 +1,58 @@
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px 24px;
+  padding: 20px var(--odh-gutter);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Five days; the first is the one that is given. */
+.dots {
+  display: grid;
+  grid-template-columns: repeat(5, 6px);
+  gap: 2px;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  background: var(--odh-ink-30);
+}
+
+.dotGiven {
+  background: var(--odh-accent);
+}
+
+.wordmark {
+  font: 600 15px var(--odh-font-sans);
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 22px;
+  align-items: center;
+  font: 500 13px var(--odh-font-sans);
+}
+
+.cta {
+  padding: 9px 16px;
+  background: var(--odh-ink);
+  color: var(--odh-surface);
+  border-radius: var(--odh-radius-pill);
+  white-space: nowrap;
+}
+
+.cta:hover {
+  background: var(--odh-accent);
+  color: var(--odh-surface);
+}

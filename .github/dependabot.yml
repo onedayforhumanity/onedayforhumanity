@@ -17,6 +17,13 @@ updates:
         update-types:
           - minor
           - patch
+    # No published typescript-eslint accepts TypeScript 7: the newest, 8.69.0,
+    # has a peer range of >=4.8.4 <6.1.0, so a major bump fails npm ci before
+    # the build runs. Remove this once typescript-eslint supports it.
+    ignore:
+      - dependency-name: typescript
+        update-types:
+          - version-update:semver-major
 
   - package-ecosystem: github-actions
     directory: /

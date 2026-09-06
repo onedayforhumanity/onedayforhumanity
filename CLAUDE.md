@@ -360,13 +360,15 @@ the pull request instead of the deployment.
 
 Every action is pinned to a commit SHA, with its version in a trailing comment.
 `.github/dependabot.yml` keeps those pins and the npm dependencies current, weekly, with minor
-and patch updates grouped into one pull request per ecosystem. Dependabot's pull requests get
-the build and bicep jobs but no deploy, because GitHub runs them without the deploy token. A
-newer push to a pull request cancels that pull request's build in progress; a push to `main`
-never cancels anything, so a production deploy always finishes. The workflow also has a
-`workflow_dispatch` trigger, so a production deploy can be started by hand from the Actions tab
-without a code change. GitHub skips the push run when it cannot list the changed files, which
-happens after a force push; the manual trigger covers that case.
+and patch updates grouped into one pull request per ecosystem. Major updates to TypeScript are
+ignored, because no published typescript-eslint accepts TypeScript 7 and a major bump fails
+`npm ci`. Remove the ignore when one does. Dependabot's pull requests get the build and bicep
+jobs but no deploy, because GitHub runs them without the deploy token. A newer push to a pull
+request cancels that pull request's build in progress; a push to `main` never cancels anything,
+so a production deploy always finishes. The workflow also has a `workflow_dispatch` trigger, so
+a production deploy can be started by hand from the Actions tab without a code change. GitHub
+skips the push run when it cannot list the changed files, which happens after a force push; the
+manual trigger covers that case.
 
 ## Verification
 

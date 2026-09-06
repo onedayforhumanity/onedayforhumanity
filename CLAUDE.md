@@ -337,7 +337,7 @@ itself.
 |---|---|---|
 | `build` | everything, forks included | `npm ci`, typecheck, lint, build, upload `web/dist` |
 | `bicep` | everything, forks included | `az bicep build`, which needs no Azure credentials |
-| `deploy` | pushes to `main`, and PRs from this repo other than Dependabot's | downloads the artifact, uploads to SWA |
+| `deploy` | pushes to `main`, manual runs, and PRs from this repo other than Dependabot's | downloads the artifact, uploads to SWA |
 | `close_preview` | PRs from this repo, on close | releases the staging environment |
 
 The deploy jobs are guarded on `github.event.pull_request.head.repo.full_name ==
@@ -354,7 +354,10 @@ Every action is pinned to a commit SHA, with its version in a trailing comment.
 and patch updates grouped into one pull request per ecosystem. Dependabot's pull requests get
 the build and bicep jobs but no deploy, because GitHub runs them without the deploy token. A
 newer push to a pull request cancels that pull request's build in progress; a push to `main`
-never cancels anything, so a production deploy always finishes.
+never cancels anything, so a production deploy always finishes. The workflow also has a
+`workflow_dispatch` trigger, so a production deploy can be started by hand from the Actions tab
+without a code change. GitHub skips the push run when it cannot list the changed files, which
+happens after a force push; the manual trigger covers that case.
 
 ## Verification
 

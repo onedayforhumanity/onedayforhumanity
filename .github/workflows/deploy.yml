@@ -38,10 +38,13 @@ on:
   workflow_dispatch:
 
 concurrency:
-  group: deploy-${{ github.workflow }}-${{ github.ref }}
-  # A newer push to a pull request replaces its preview build, but a
-  # production deploy is left to finish, so main is never half uploaded.
-  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+  # One run at a time per event and ref, and nothing is ever cancelled. An
+  # expression that cancelled only pull request runs was tried on 6 September
+  # 2026 and removed the same day: merging two pull requests inside a minute
+  # left four runs cancelling each other in turn, both production deploys
+  # among them. A queue costs a few minutes. A half-uploaded site costs more.
+  group: deploy-${{ github.workflow }}-${{ github.event_name }}-${{ github.ref }}
+  cancel-in-progress: false
 
 permissions:
   contents: read

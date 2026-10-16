@@ -40,8 +40,8 @@ This repository holds three things:
    the questions still open.
 
 Joining the movement is a pull request against `SIGNATORIES.md`. The site therefore needs no
-backend, no database, and no forms, and it stores nothing about a visitor. Google Analytics
-runs without cookies or identifiers; see Analytics below.
+backend, no database, and no forms. The only things it keeps in a visitor's browser are their
+cookie choice and, if they allow it, Google Analytics' two cookies; see Analytics below.
 
 `DESIGN_NOTES.md` is not a visual design document. It is the sourced rationale behind the
 manifesto's rules. The visual system comes from Claude Design (see below), not from the repo.
@@ -229,9 +229,9 @@ Everything here is deliberate. Do not "fix" one without reading the reason.
    are chosen and nominated, instead of the design's one founding and three candidate cards; the
    design's `showCandidateMissions` prop has no equivalent any more. The "We commit" section
    shows the ten principles instead of the design's six commitments. Mission cards may carry one
-   link. The footer gained a Principles link and, on 6 September 2026, one sentence stating
-   that the site sets no cookies. All of it uses the design's card grammar and tokens; none of
-   it is in the artboard.
+   link. The footer gained a Principles link and one sentence about analytics, which since
+   16 October 2026 ends in a button that reopens the cookie banner. All of it uses the design's
+   card grammar and tokens; none of it is in the artboard.
 6. **The hero's id is `hero`, not the design's `top`.** The logo links to `/#top` as in the
    design; with no element of that id, browsers scroll to the very top of the document, header
    included, instead of to the hero and past the menu.
@@ -252,6 +252,11 @@ Everything here is deliberate. Do not "fix" one without reading the reason.
    its position.
 9. **The badge row in the Join panel carries one line saying where to get the badge**, added
    on 6 September 2026 with the badge files. The design draws the four chips and nothing else.
+10. **The cookie banner**, added on 16 October 2026, is not in the design either.
+   `ConsentBanner` is a small card fixed to the bottom of every page, on the Join panel's ink
+   ground, with its mono label and outline buttons. "Allow cookies" and "Decline" are styled
+   alike on purpose: refusing has to be as easy as allowing. It does not take focus on load;
+   reopened from the footer, it does.
 
 ### Not in the design
 
@@ -319,21 +324,34 @@ are retained in deployment history.
 ## Analytics
 
 Google Analytics 4, measurement id `G-FBW9K9TNSK`, loaded by `web/src/analytics.ts` from each
-page entry. It runs in Consent Mode with every storage type denied before `gtag.js` loads, so
-it sets no cookies and stores no identifier, and no consent banner is shown. The cost, chosen
-by the founder on 6 September 2026 over a full count: Google only surfaces cookieless visits
-through behavioral modeling, which needs roughly 1,000 events a day for a week; below that,
-the visits are sent but not reported. Ad blockers remove a further share regardless.
+page entry. It runs in Consent Mode, advanced mode, with every storage type denied before
+`gtag.js` loads, and `ConsentBanner` asks the visitor once:
 
-The module is a no-op in development and for visitors whose browser sends Global Privacy
-Control or Do Not Track. The footer says so in one sentence. There is no inline script; the
-init lives in the bundle, which is why the CSP still has no `'unsafe-inline'`. The CSP allows
-`www.googletagmanager.com` for scripts and Google's analytics hosts for connections and
-images, and nothing else off-origin.
+| Choice | `analytics_storage` | What GA does |
+|---|---|---|
+| None yet, or declined | denied | Cookieless hits (`gcs=G100`); used for modeling only, never shown in reports |
+| Allowed | granted | Sets `_ga` and `_ga_FBW9K9TNSK`; hits (`gcs=G101`) appear in every report |
 
-To switch to a full count: grant `analytics_storage` after a consent banner, and add the
-banner as a component in the Join panel's grammar. Nothing else changes. The measurement id is
-public by nature (it ships in the page) and is fine in this repository.
+The ad storage types are never granted. The choice lives in `localStorage` under
+`odh-analytics-consent`; declining after allowing deletes both cookies at every domain level.
+The footer's "Change your cookie choice" reopens the banner.
+
+History, so nobody repeats it: from 6 September to 16 October 2026 the site ran cookieless
+with no banner. GA accepted every hit and its Home page still said no data had been received,
+because cookieless hits only feed behavioral modeling, which needs about 1,000 events a day
+for a week plus a share of consenting visitors, and this site had none. GA4 has no setting that
+reports visits without cookies: `client_storage: 'none'` is ignored (it was an analytics.js
+option), and an unwritable `cookie_domain` stops the hits altogether. Both were tried on
+16 October. A full count without cookies would need the Measurement Protocol from a server
+function, which the founder declined in favor of the banner.
+
+The module loads nothing in development and nothing for visitors whose browser sends Global
+Privacy Control or Do Not Track; those visitors see no banner and no footer button. There is
+no inline script; the init lives in the bundle, which is why the CSP still has no
+`'unsafe-inline'`. The CSP allows `www.googletagmanager.com` for scripts and Google's
+analytics hosts for connections and images, and nothing else off-origin. Ad blockers remove a
+share of visits regardless. The measurement id is public by nature (it ships in the page) and
+is fine in this repository.
 
 ## CI
 
@@ -379,7 +397,8 @@ For anything that touches `web/`, after the three commands above:
    CDP (`--remote-debugging-port`) to load `/`, `/manifesto/`, and `/principles/` at 1440px and
    390px. Check:
    zero console errors, no requests to any origin other than the preview server and Google's
-   analytics hosts, `document.cookie` empty after load, zero elements with a `style` attribute, `scrollWidth` equal to the viewport width, one `h1` per
+   analytics hosts, `document.cookie` empty after load until "Allow cookies" is clicked and
+   empty again after "Decline", the cookie banner present on a fresh profile, zero elements with a `style` attribute, `scrollWidth` equal to the viewport width, one `h1` per
    page, and `document.fonts` reporting both variable fonts loaded. Screenshot both widths and
    look at them.
 2. Sample pixels from the screenshot against the tokens: page ground `#fbf8f3`, terracotta

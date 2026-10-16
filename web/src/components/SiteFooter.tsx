@@ -1,3 +1,4 @@
+import { analyticsOffered, openConsentBanner } from '../analytics'
 import { links, site } from '../content/site'
 import { cx } from '../lib/cx'
 import s from './SiteFooter.module.css'
@@ -14,9 +15,14 @@ export function SiteFooter() {
           4.0.
         </span>
         <span>
-          No cookies. Visits are counted without identifiers, and not at all if your browser asks
-          not to be tracked.
+          Google Analytics sets cookies only if you allow it. Without them, Google still receives
+          each visit with no identifier, and nothing at all if your browser asks not to be tracked.
         </span>
+        {analyticsOffered() && (
+          <button type="button" className={s.choice} onClick={openConsentBanner}>
+            Change your cookie choice
+          </button>
+        )}
       </div>
       <nav className={s.links} aria-label="Footer">
         <a href={links.repo}>GitHub</a>

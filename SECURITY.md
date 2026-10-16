@@ -1,6 +1,7 @@
 # Security
 
-The site has no backend, sets no cookies, and stores nothing about a visitor. Most of what can
+The site has no backend and no forms. The only cookies it sets are Google Analytics' two, and
+only for a visitor who allows them. Most of what can
 go wrong lives in this repository: the build, the workflow that deploys it, and the documents
 that people edit by pull request.
 

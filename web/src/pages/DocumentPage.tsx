@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react'
+import { ConsentBanner } from '../components/ConsentBanner'
 import { Section } from '../components/Section'
 import { SiteFooter } from '../components/SiteFooter'
 import { SiteHeader } from '../components/SiteHeader'
@@ -44,6 +45,7 @@ export function DocumentPage({
       <a className="odh-skip-link" href="#main">
         Skip to content
       </a>
+      <ConsentBanner />
       <SiteHeader page={current} />
       <main id="main">
         <article

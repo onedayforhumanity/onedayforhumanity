@@ -1,6 +1,7 @@
 import type { HeroCadence } from '../content/site'
 import { Cadences } from '../components/Cadences'
 import { Commitments } from '../components/Commitments'
+import { ConsentBanner } from '../components/ConsentBanner'
 import { Hero } from '../components/Hero'
 import { Join } from '../components/Join'
 import { Missions } from '../components/Missions'
@@ -28,6 +29,7 @@ export function LandingPage({ heroCadence = 'monthly' }: LandingPageProps) {
       <a className="odh-skip-link" href="#main">
         Skip to content
       </a>
+      <ConsentBanner />
       <SiteHeader page="landing" />
       <main id="main">
         <Hero cadence={heroCadence} />

@@ -31,9 +31,9 @@ is a draft and open for comment. onedayforhumanity.org
    day-sized tasks, and a definition of done. Everything built is a public good. Everyone may
    use it, forever.
 
-4. Nothing is launched. The manifesto is a draft, the founding mission (open diabetes
-   technology) is a proposal, and the first steward has not stepped forward. Read it, sign it,
-   or argue with it: onedayforhumanity.org
+4. Nothing is launched. The manifesto is a draft, two type 1 diabetes apps (DiabetesNinja and
+   Ronin) have been part of it so far, and the first steward has not stepped forward. Read it,
+   sign it, or argue with it: onedayforhumanity.org
 
 ## A note on tone
 

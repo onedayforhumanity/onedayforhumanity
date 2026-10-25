@@ -225,11 +225,13 @@ Everything here is deliberate. Do not "fix" one without reading the reason.
    and 4.9. Raising the four terracotta-ground opacities to about 0.95 would clear AA without
    changing the palette, if the movement decides accessibility outranks the design's softness.
 5. **Content decisions the founder made on 6 September 2026**, after the research in
-   `research/`. The Missions section shows one proposed mission and two cards about how missions
-   are chosen and nominated, instead of the design's one founding and three candidate cards; the
-   design's `showCandidateMissions` prop has no equivalent any more. The "We commit" section
-   shows the ten principles instead of the design's six commitments. Mission cards may carry one
-   link. The footer gained a Principles link and one sentence about analytics, which since
+   `research/`. The Missions section shows three cards instead of the design's one founding and
+   three candidate cards; the design's `showCandidateMissions` prop has no equivalent any more.
+   Since 25 October 2026 the first card names DiabetesNinja and Ronin, the two apps that have
+   been part of the movement, in place of the proposed open diabetes technology mission, whose
+   projects never took part. The other two say how missions are chosen and nominated. The "We
+   commit" section shows the ten principles instead of the design's six commitments. Mission cards may carry
+   links. The footer gained a Principles link and one sentence about analytics, which since
    16 October 2026 ends in a button that reopens the cookie banner. All of it uses the design's
    card grammar and tokens; none of it is in the artboard.
 6. **The hero's id is `hero`, not the design's `top`.** The logo links to `/#top` as in the

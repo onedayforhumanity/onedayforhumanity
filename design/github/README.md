@@ -40,9 +40,9 @@ good. Everyone may use it, forever.
   if you do not use git.
 - [Nominate a mission](https://github.com/onedayforhumanity/onedayforhumanity/issues/new?template=mission-nomination.yml).
 
-Status: pre-launch. The founding mission, open diabetes technology, is a proposal until it has a
-steward. If you are inside OpenAPS, AndroidAPS, Loop, Trio, or Nightscout and could steward it,
-we want to hear from you.
+Status: pre-launch. Two apps for people with type 1 diabetes,
+[DiabetesNinja](https://diabetesninja.se) and [Ronin](https://ronin.diabetesninja.se), have been
+part of the movement so far.
 
 Code is Apache-2.0 unless a mission states otherwise. Everything written is CC BY 4.0.
 ```

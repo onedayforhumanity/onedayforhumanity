@@ -34,6 +34,8 @@ export const links = {
   signIssue: `${REPO}/issues/new?template=sign.yml`,
   nominate: `${REPO}/issues/new?template=mission-nomination.yml`,
   governance: `${REPO}/blob/main/GOVERNANCE.md`,
+  diabetesNinja: 'https://diabetesninja.se',
+  ronin: 'https://ronin.diabetesninja.se',
 } as const
 
 /* ------------------------------------------------------------------ props */
@@ -150,22 +152,25 @@ export interface Mission {
   readonly body: string
   /** `founding` is the filled terracotta card; `plain` cards are white. */
   readonly tone: 'founding' | 'plain'
-  readonly link?: { readonly label: string; readonly href: string }
+  readonly links?: readonly { readonly label: string; readonly href: string }[]
 }
 
 /**
- * One proposed mission and the two things the reader can do about missions.
- * The movement lists no mission without a steward, so the founding mission is
- * shown as a proposal, and the former candidate domains are gone on purpose
- * (see research/founding-missions.md).
+ * The two apps that have been part of the movement so far, and the two things
+ * the reader can do about missions. The card that used to propose open diabetes
+ * technology as the founding mission named projects that never took part, so
+ * it is gone (see research/founding-missions.md for the earlier reasoning).
  */
 export const missions: readonly Mission[] = [
   {
-    label: 'Founding mission · proposed',
-    title: 'Open diabetes technology',
-    body: 'Volunteers built OpenAPS, AndroidAPS, Loop, Trio, and Nightscout, and a randomized trial (NEJM, 2022) found 3 hours 21 minutes more time in range per day. Several thousand people rely on these tools. We will recognize this mission when it has a named steward, a council from the T1D community, and ten groomed one-day issues. We will never distribute builds; that would make us a device manufacturer.',
+    label: 'Part of One Day for Humanity',
+    title: 'DiabetesNinja and Ronin',
+    body: 'Two free apps for people with type 1 diabetes have been part of One Day for Humanity. DiabetesNinja is for children and adults: logging blood sugar, carbohydrates, and insulin earns stars that move a ninja through ten belts, and family can follow along. Ronin is a diary for adults on iPhone, Android, Apple Watch, and Wear OS. It keeps everything on the phone, with no account and no dosing advice.',
     tone: 'founding',
-    link: { label: 'Offer to steward it', href: links.nominate },
+    links: [
+      { label: 'DiabetesNinja', href: links.diabetesNinja },
+      { label: 'Ronin', href: links.ronin },
+    ],
   },
   {
     label: 'How missions are chosen',
@@ -178,7 +183,7 @@ export const missions: readonly Mission[] = [
     title: 'Propose the next one',
     body: 'Say who suffers and how we know, which open projects the work would feed, and who could steward it. Nominations from people who live with the problem, and from maintainers of the projects concerned, carry the most weight. Every nomination and our reasoning is published, accepted or not.',
     tone: 'plain',
-    link: { label: 'Open a nomination', href: links.nominate },
+    links: [{ label: 'Open a nomination', href: links.nominate }],
   },
 ]
 

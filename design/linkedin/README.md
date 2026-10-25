@@ -15,7 +15,7 @@ own preview card; nothing to upload for that.
 | Company size | The smallest that is true |
 | Type | Nonprofit |
 | Headquarters | Your city |
-| Specialties | open source, digital public goods, pledges, open diabetes technology |
+| Specialties | open source, digital public goods, pledges, type 1 diabetes apps |
 
 ## About (2,000 characters at most; this is about 1,250)
 
@@ -33,9 +33,9 @@ of done. Everything built there is a public good. Everyone may use it, forever.
 
 Progress is published. Failure is published too, in the same place, in the same font.
 
-We are pre-launch. The manifesto is a draft, open for comment and open to signatures. Our
-proposed founding mission is open diabetes technology, feeding the projects that several
-thousand people already rely on, and it becomes a mission the day it has a steward.
+We are pre-launch. The manifesto is a draft, open for comment and open to signatures. Two free
+apps for people with type 1 diabetes have been part of the movement so far: DiabetesNinja
+(diabetesninja.se) and Ronin (ronin.diabetesninja.se).
 
 Read the manifesto and sign it at onedayforhumanity.org.
 
@@ -48,8 +48,8 @@ or year, to humanity's hardest problems, and give the results away. The day is c
 and reported in public. The work goes into open-source missions with a steward and a backlog
 anyone can pick up.
 
-Nothing is launched yet. The manifesto is a draft, the founding mission is a proposal, and the
-first steward has not stepped forward. That is why we are publishing now rather than later: we
+Nothing is launched yet. The manifesto is a draft, two apps for people with type 1 diabetes
+have been part of it so far, and the first steward has not stepped forward. That is why we are publishing now rather than later: we
 would rather be argued with than admired.
 
 Read it, sign it, or tell us what is wrong with it: onedayforhumanity.org
@@ -66,8 +66,8 @@ one day, on whatever cadence they can keep, given to humanity's hardest problems
 with the results given away. Not a hackathon. Not a donation. A recurring day, counted and
 reported.
 
-It is a draft. The manifesto is open for comment, the founding mission is a proposal, and I am
-looking for the first steward. If you have ever wanted to give a day and not known where, read
+It is a draft. The manifesto is open for comment, DiabetesNinja and Ronin have been part of it
+so far, and I am looking for the first steward. If you have ever wanted to give a day and not known where, read
 it: onedayforhumanity.org
 
 ## A note on tone

@@ -52,11 +52,16 @@
   text-wrap: pretty;
 }
 
-/* One action per card at most, set like the hero's secondary link. */
-.link {
-  align-self: flex-start;
-  margin-top: auto;
+/* A card's links, set like the hero's secondary link and pinned to its foot. */
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  margin: auto 0 0;
   padding-top: 4px;
+}
+
+.link {
   font: 500 14px var(--odh-font-sans);
   text-decoration: underline;
   text-underline-offset: 3px;

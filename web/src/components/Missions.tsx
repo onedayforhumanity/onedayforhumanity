@@ -8,10 +8,10 @@ export function Missions() {
   return (
     <Section id="missions">
       <div className={sec.headingRow}>
-        <h2 className={sec.title}>Founding mission</h2>
+        <h2 className={sec.title}>Missions</h2>
         <p className={sec.lede}>
-          Proposed, and seeking a steward. Until it has one it is a proposal, and no other
-          mission is listed, on purpose.
+          Two apps have been part of the movement so far. The next mission can be one you
+          propose.
         </p>
       </div>
 
@@ -24,10 +24,14 @@ export function Missions() {
             <p className={s.label}>{mission.label}</p>
             <h3 className={s.title}>{mission.title}</h3>
             <p className={s.why}>{mission.body}</p>
-            {mission.link && (
-              <a href={mission.link.href} className={s.link}>
-                {mission.link.label}
-              </a>
+            {mission.links && (
+              <p className={s.links}>
+                {mission.links.map((link) => (
+                  <a key={link.href + link.label} href={link.href} className={s.link}>
+                    {link.label}
+                  </a>
+                ))}
+              </p>
             )}
           </article>
         ))}

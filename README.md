@@ -33,19 +33,17 @@ The short text people sign is [MANIFESTO.md](MANIFESTO.md). The rules behind it 
 - **Give a day** once a mission is recognized: [CONTRIBUTING.md](CONTRIBUTING.md) says how, and
   what makes a day count.
 
-## Founding mission, proposed
+## Part of the movement so far
 
-Open diabetes technology. Volunteers built OpenAPS, AndroidAPS, Loop, Trio, and Nightscout. A
-randomized trial in the New England Journal of Medicine (2022) found the open algorithm gave
-users 3 hours 21 minutes more time in range per day, and several thousand people rely on these
-tools. We will recognize this mission when it has a named steward, a council from the T1D
-community, and ten groomed `one-day` issues. Until then it is a proposal, and no other mission
-is listed, on purpose. If you are inside one of these projects and could steward it, we want to
-hear from you. We will never distribute builds of these apps; that would make us a device
-manufacturer.
+Two free apps for people with type 1 diabetes have been part of One Day for Humanity.
+[DiabetesNinja](https://diabetesninja.se) is for children and adults: logging blood sugar,
+carbohydrates, and insulin earns stars that move a ninja through ten belts, and family can
+follow along. [Ronin](https://ronin.diabetesninja.se) is a diary for adults on iPhone, Android,
+Apple Watch, and Wear OS. It keeps everything on the phone, with no account and no dosing
+advice.
 
-The research behind this choice, and behind every rule, is in [DESIGN_NOTES.md](DESIGN_NOTES.md)
-and [research/](research/).
+The research behind every rule is in [DESIGN_NOTES.md](DESIGN_NOTES.md) and
+[research/](research/).
 
 ## In this repository
 

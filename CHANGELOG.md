@@ -3,6 +3,16 @@
 Every released version of the manifesto and the principles is recorded here, newest first.
 People sign a version. The version they signed is recorded in [SIGNATORIES.md](SIGNATORIES.md).
 
+## 0.3, 2026-10-25
+
+The manifesto only; the principles are unchanged and stay at 0.2.
+
+- "Nominate a mission, or help groom the founding mission's backlog" became "Nominate a
+  mission". The proposed founding mission, open diabetes technology, named OpenAPS, AndroidAPS,
+  Loop, Trio, and Nightscout, none of which has taken part in the movement. The proposal was
+  withdrawn, so there is no founding mission and no backlog to groom. The site now names the
+  two apps that have been part of the movement, DiabetesNinja and Ronin.
+
 ## 0.2, 2026-09-06
 
 The manifesto was split in two. [MANIFESTO.md](MANIFESTO.md) is now the short text people

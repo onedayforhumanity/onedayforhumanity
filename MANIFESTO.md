@@ -1,6 +1,6 @@
 # The One Day for Humanity Manifesto
 
-*Version 0.2, a draft for public comment. What changed since 0.1 is in [CHANGELOG.md](CHANGELOG.md).*
+*Version 0.3, a draft for public comment. Every change between versions is in [CHANGELOG.md](CHANGELOG.md).*
 
 ---
 
@@ -39,7 +39,7 @@ done; failure published in the same font as progress.
 
 - **Individuals:** sign by [adding one line to SIGNATORIES.md](https://github.com/onedayforhumanity/onedayforhumanity/edit/main/SIGNATORIES.md): your name, your cadence, and the version you signed. If you do not use git, [open an issue](https://github.com/onedayforhumanity/onedayforhumanity/issues/new?template=sign.yml) and we will add you.
 - **Organizations:** read [PLEDGE.md](PLEDGE.md), publish your first pledge post, then sign the same way.
-- **Everyone:** [nominate a mission](https://github.com/onedayforhumanity/onedayforhumanity/issues/new?template=mission-nomination.yml), or help groom the founding mission's backlog. When a mission is recognized, pick an issue labelled `one-day` and give your first day.
+- **Everyone:** [nominate a mission](https://github.com/onedayforhumanity/onedayforhumanity/issues/new?template=mission-nomination.yml). When a mission is recognized, pick an issue labelled `one-day` and give your first day.
 
 ---
 

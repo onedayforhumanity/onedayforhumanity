@@ -44,9 +44,8 @@ export function Join() {
                 or <a href={links.signIssue}>open an issue</a> if you do not use git.
               </Step>
               <Step n={3}>
-                Help groom the founding mission's backlog, or nominate a mission. When a mission
-                is recognized, pick an issue labelled <code className={s.code}>one-day</code> and
-                give your first day.
+                Nominate a mission. When a mission is recognized, pick an issue labelled{' '}
+                <code className={s.code}>one-day</code> and give your first day.
               </Step>
             </ol>
             <a href={links.signatoriesEdit} className={s.buttonOutline}>

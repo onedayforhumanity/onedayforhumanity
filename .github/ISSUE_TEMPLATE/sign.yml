@@ -7,7 +7,7 @@ body:
     attributes:
       value: |
         Signing is public. Your name, cadence, and the version you signed go into SIGNATORIES.md. Nothing else is stored anywhere.
-        Read MANIFESTO.md and PRINCIPLES.md first. You are signing version 0.2.
+        Read MANIFESTO.md and PRINCIPLES.md first. You are signing version 0.3.
   - type: input
     id: name
     attributes:

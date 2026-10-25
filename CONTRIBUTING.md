@@ -5,9 +5,8 @@
 1. Read [MANIFESTO.md](MANIFESTO.md) and [PRINCIPLES.md](PRINCIPLES.md). If you agree, add
    yourself to [SIGNATORIES.md](SIGNATORIES.md), and say whether your days are your own time or
    your employer's (see [PLEDGE.md](PLEDGE.md)).
-2. Pick a recognized mission, or help groom the founding mission's backlog while it seeks a
-   steward. Read the mission's `README` and its definition of done (section 5 of its mission
-   file).
+2. Pick a recognized mission, or nominate one if none fits yet. Read the mission's `README` and
+   its definition of done (section 5 of its mission file).
 3. Find an issue labelled `one-day` (or `good-first-day` if you are new).
    Every one of these is scoped to be finished in a single working day.
 4. Comment "taking this" so nobody duplicates your work.

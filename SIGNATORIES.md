@@ -11,13 +11,13 @@ stays in the history.
 
 | Organization | Tier | Since | Manifesto | Latest report |
 |---|---|---|---|---|
-| *(your organization)* | Monthly | 2026-xx | 0.2 | *(link)* |
+| *(your organization)* | Monthly | 2026-xx | 0.3 | *(link)* |
 
 ## Individuals
 
 | Name | Tier | Since | Manifesto | Whose time |
 |---|---|---|---|---|
-| *(your name)* | Quarterly | 2026-xx | 0.2 | own / employer |
+| *(your name)* | Quarterly | 2026-xx | 0.3 | own / employer |
 
 ## Lapsed
 
